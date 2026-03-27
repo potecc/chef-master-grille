@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Master Grille | 24 Hours Fast Delivery</title>
+    <meta name="description" content="Chef Master Grille offers freshly prepared meals with 24-hours fast delivery. Order now directly via WhatsApp!">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for standard icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="brand-logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Chef Master Grille Logo">
+            </a>
+            <nav class="nav-links">
+                <a href="#menu"><i class="fa-solid fa-utensils"></i> Menu</a>
+                <a href="https://wa.me/2349013461572?text=Hello%20Chef%20Master%20Grille,%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn-primary" id="hdr-order-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Order Now
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h3>Chef Master Grille</h3>
+                <p>24 Hours Delivery • Freshly Prepared • Always Fast</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="https://wa.me/2349013461572" target="_blank">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <div class="contact-info">
+                    <p><i class="fa-solid fa-phone"></i> +234 901 346 1572</p>
+                    <p><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://wa.me/2349013461572" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Chef Master Grille. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2349013461572?text=Hello%20Chef%20Master%20Grille,%20I'm%20ready%20to%20order!" class="floating-wa" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // Scroll Reveal Animations
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(reveal => {
+            revealObserver.observe(reveal);
+        });
+
+        // Button click effect (optional polish)
+        document.querySelectorAll('.btn-primary, .btn-secondary, .btn-order').forEach(button => {
+            button.addEventListener('mousedown', () => button.style.transform = 'scale(0.97)');
+            button.addEventListener('mouseup', () => button.style.transform = 'scale(1)');
+            button.addEventListener('mouseleave', () => button.style.transform = 'scale(1)');
+        });
+    </script>
+</body>
+</html>

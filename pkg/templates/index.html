@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1 class="hero-title">Experience the <span>Master</span> of Grilles</h1>
+        <p class="hero-subtitle">Freshly Prepared Meals. 24 Hours Fast Delivery.</p>
+        <div class="hero-actions">
+            <a href="#menu" class="btn-secondary">Explore Menu</a>
+            <a href="https://wa.me/2349013461572?text=Hello%20Chef%20Master%20Grille,%20I'd%20like%20to%20make%20an%20order!" target="_blank" class="btn-primary">
+                <i class="fa-brands fa-whatsapp"></i> Order to Whatsapp
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="menu-section">
+    <div class="container">
+        <div class="section-heading reveal">
+            <h2>Our Signature Menu</h2>
+            <p>From the grill directly to your door.</p>
+        </div>
+
+        <div class="menu-grid">
+            <!-- Menu Item 1 -->
+            <div class="menu-card reveal">
+                <div class="menu-card-image" style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Chef's Special BBQ Ribs</h3>
+                        <span class="price">₦12,500</span>
+                    </div>
+                    <p class="menu-card-desc">Tender, fall-off-the-bone pork ribs glazed with our signature smoky BBQ sauce.</p>
+                    <a href="#" class="btn-order whatsapp-order-btn" data-item="Chef's Special BBQ Ribs" data-price="12500">
+                        <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu Item 2 -->
+            <div class="menu-card reveal">
+                <div class="menu-card-image" style="background-image: url('https://images.unsplash.com/photo-1544025162-8316235882cd?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Master Grille Chicken</h3>
+                        <span class="price">₦8,000</span>
+                    </div>
+                    <p class="menu-card-desc">Whole grilled chicken marinated for 24 hours in our secret spicy blend.</p>
+                    <a href="#" class="btn-order whatsapp-order-btn" data-item="Master Grille Chicken" data-price="8000">
+                        <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu Item 3 -->
+            <div class="menu-card reveal">
+                <div class="menu-card-image" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Premium Beef Burger</h3>
+                        <span class="price">₦6,500</span>
+                    </div>
+                    <p class="menu-card-desc">Double patty smashed burger with caramelized onions, cheddar, and toasted brioche.</p>
+                    <a href="#" class="btn-order whatsapp-order-btn" data-item="Premium Beef Burger" data-price="6500">
+                        <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu Item 4 -->
+            <div class="menu-card reveal">
+                <div class="menu-card-image" style="background-image: url('https://images.unsplash.com/photo-1626082895617-2c6b412b1860?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Seafood Platter</h3>
+                        <span class="price">₦18,000</span>
+                    </div>
+                    <p class="menu-card-desc">Grilled prawns, calamari, and butter-garlic crab claws served with spicy mayo.</p>
+                    <a href="#" class="btn-order whatsapp-order-btn" data-item="Seafood Platter" data-price="18000">
+                        <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Menu Item 5 -->
+            <div class="menu-card reveal">
+                <div class="menu-card-image" style="background-image: url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Spicy Roasted Potatoes</h3>
+                        <span class="price">₦3,500</span>
+                    </div>
+                    <p class="menu-card-desc">Crispy baby potatoes roasted with paprika and fresh rosemary herbs.</p>
+                    <a href="#" class="btn-order whatsapp-order-btn" data-item="Spicy Roasted Potatoes" data-price="3500">
+                        <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu Item 6 -->
+            <div class="menu-card reveal">
+                <div class="menu-card-image" style="background-image: url('https://images.unsplash.com/photo-1627042633145-b780d842bacb?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Classic Steak & Fries</h3>
+                        <span class="price">₦22,000</span>
+                    </div>
+                    <p class="menu-card-desc">Premium ribeye steak cooked to perfection, served with golden crunch fries.</p>
+                    <a href="#" class="btn-order whatsapp-order-btn" data-item="Classic Steak & Fries" data-price="22000">
+                        <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container features-grid">
+        <div class="feature-box reveal">
+            <i class="fa-solid fa-clock"></i>
+            <h3>24/7 Delivery</h3>
+            <p>Hungry at 3 AM? We've got you covered. Day or night, we deliver fast.</p>
+        </div>
+        <div class="feature-box reveal">
+            <i class="fa-solid fa-fire-burner"></i>
+            <h3>Freshly Prepared</h3>
+            <p>We grill to order. Your food arrives hot, fresh, and bursting with flavor.</p>
+        </div>
+        <div class="feature-box reveal">
+            <i class="fa-brands fa-whatsapp"></i>
+            <h3>Easy Ordering</h3>
+            <p>Seamlessly order via WhatsApp. Just a message away from a great meal.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Script for WhatsApp ordering -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const orderButtons = document.querySelectorAll('.whatsapp-order-btn');
+        const phoneNumber = "2349013461572";
+
+        orderButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const itemName = button.getAttribute('data-item');
+                const itemPrice = button.getAttribute('data-price');
+                
+                // Construct the message
+                const message = `Hello Chef Master Grille! %0A%0AI would like to order: %0A🍔 *${itemName}* %0A💰 Price: ₦${parseInt(itemPrice).toLocaleString()} %0A%0APlease let me know the delivery details.`;
+                
+                // Redirect to WhatsApp
+                const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+                window.open(waUrl, '_blank');
+            });
+        });
+    });
+</script>
+{% endblock %}
